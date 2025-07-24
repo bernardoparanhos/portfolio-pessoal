@@ -491,7 +491,6 @@ body {
     text-align: center;
 }
 
-
 .education-item {
     display: flex;
     align-items: center;
@@ -500,15 +499,21 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 20px 30px;
     margin-bottom: 40px;
-    max-width: 800px;
-    width: 90%;
+    max-width: 1100px;
+    width: 95%;
     box-sizing: border-box;
 }
 
-.education-logo {
+.logos-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
     flex-shrink: 0;
-    margin-right: 25px;
-    width: 80px;
+    margin-right: 35px;
+}
+
+.education-logo {
+    width: 90px;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -530,9 +535,22 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.3em;
     color: #333;
-    margin: 0 0 5px 0;
+    margin: 0;
     font-weight: 700;
 }
+
+/* Estilo para o texto "Consórcio Cederj" */
+.education-details .cederj-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15em; /* Diminuído de 1.3em para 1.15em */
+    color: #333;
+    margin: 0 0 5px 0;
+    line-height: 1.4;
+    font-weight: 700; /* Mantém em negrito */
+    display: block;
+    margin-top: 5px;
+}
+
 
 .education-details p {
     font-family: 'Montserrat', sans-serif;
@@ -545,7 +563,7 @@ body {
 
 .education-location {
     flex-shrink: 0;
-    margin-left: 25px;
+    margin-left: 35px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -556,7 +574,6 @@ body {
     height: 40px;
     flex-shrink: 0;
 }
-
 
 .location-details {
     display: flex;
@@ -573,124 +590,175 @@ body {
     white-space: nowrap;
 }
 
-
 .location-details p:nth-child(2) {
     white-space: normal;
     word-break: break-word;
     max-width: 120px;
     text-align: right;
-    
 }
 
-
+/* -----------------------------------------
+   AJUSTES PARA TELAS MENORES (RESPONSIVIDADE)
+   -----------------------------------------
+*/
 
 @media (max-width: 768px) {
-
     .education-item {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
+        flex-wrap: wrap; 
+        justify-content: center; 
+        padding: 15px 10px; 
         margin-bottom: 30px;
     }
 
-    .education-logo {
-        margin-right: 0;
-        margin-bottom: 15px;
+    .logos-container {
+        flex-direction: row; 
+        margin-right: 0; 
+        margin-bottom: 15px; 
+        width: 100%; 
+        justify-content: center; 
+        order: 1; 
+        gap: 20px; 
     }
 
+    .education-logo {
+        width: 75px; 
+        height: 65px;
+        margin-right: 0; 
+        margin-left: 0;
+    }
+    
     .education-details {
         text-align: center;
         margin-bottom: 15px;
+        width: 100%; 
+        order: 2; 
+    }
+    
+    .education-details h3 {
+        font-size: 1.2em; 
     }
 
-    
+    .education-details .cederj-text {
+        font-size: 1.1em; /* Ajusta também para mobile, mantendo a proporção */
+        margin-bottom: 5px; 
+        margin-top: 5px; 
+    }
+
+    .education-details p {
+        font-size: 0.9em; 
+    }
+
     .education-location {
         margin-left: 0;
-        flex-direction: column;
+        flex-direction: row; 
         justify-content: center;
         align-items: center;
         gap: 5px;
+        width: 100%; 
+        order: 3; 
     }
 
     .education-location svg {
-        margin-bottom: 5px;
+        margin-bottom: 0; 
     }
 
     .location-details {
         align-items: center;
     }
-    
-    
+
     .location-details p:nth-child(2) {
         text-align: center;
-        max-width: none;
+        max-width: none; 
     }
 
     #page2 h2 {
-        font-size: 1.5em; /* Ajuste para telas entre 768px e 480px */
+        font-size: 1.5em; 
     }
 }
 
 @media (max-width: 480px) {
-    
-
     .education-item {
-        padding: 15px;
+        padding: 10px 5px; 
     }
+
     .education-logo {
-        width: 60px;
-        height: 60px;
+        width: 65px; 
+        height: 55px;
     }
+    
+    .logos-container {
+        gap: 15px; 
+    }
+
     .education-details h3 {
-        font-size: 1.1em;
+        font-size: 1em;
     }
+
+    .education-details .cederj-text {
+        font-size: 0.9em; /* Ajusta o tamanho para telas muito pequenas */
+    }
+
     .education-details p {
-        font-size: 0.85em;
-    }
-    .education-location svg {
-        width: 30px;
-        height: 30px;
-    }
-    .location-details p {
         font-size: 0.8em;
     }
 
+    .education-location svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .location-details p {
+        font-size: 0.75em;
+    }
+
     #page2 h2 {
-        font-size: 1.3em; /* Ajuste para telas menores que 480px */
+        font-size: 1.3em;
     }
 }
 
 @media (max-height: 480px) and (orientation: landscape) {
-    
     .education-item {
         padding: 15px 20px;
     }
-    .education-logo {
-        width: 60px;
-        height: 60px;
+
+    .logos-container {
+        flex-direction: row; 
         margin-right: 15px;
+        margin-bottom: 0;
+        gap: 10px;
     }
+
+    .education-logo {
+        width: 70px;
+        height: 60px;
+        margin-right: 0;
+    }
+
     .education-details h3 {
         font-size: 1.1em;
     }
+    
+    .education-details .cederj-text {
+        font-size: 1.0em; /* Ajusta o tamanho em landscape para manter a proporção */
+    }
+
     .education-details p {
         font-size: 0.85em;
     }
+
     .education-location {
         margin-left: 15px;
     }
+
     .education-location svg {
         width: 30px;
         height: 30px;
     }
+
     .location-details p {
         font-size: 0.8em;
     }
 }
-
-
-
-
 /* ===================================== */
 /* --- Novas Seções (Page 3 e Page 4) --- */
 /* ===================================== */
