@@ -409,9 +409,7 @@ body {
     
 }
 
-/* ===================================== */
-/* --- Média Query para Orientação Paisagem (Landscape) --- */
-/* ===================================== */
+
 @media (max-height: 480px) and (orientation: landscape) {
     .image-container {
         height: 85vh;
@@ -539,14 +537,14 @@ body {
     font-weight: 700;
 }
 
-/* Estilo para o texto "Consórcio Cederj" */
+
 .education-details .cederj-text {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.15em; /* Diminuído de 1.3em para 1.15em */
+    font-size: 1.15em; 
     color: #333;
     margin: 0 0 5px 0;
     line-height: 1.4;
-    font-weight: 700; /* Mantém em negrito */
+    font-weight: 700; 
     display: block;
     margin-top: 5px;
 }
@@ -639,7 +637,7 @@ body {
     }
 
     .education-details .cederj-text {
-        font-size: 1.1em; /* Ajusta também para mobile, mantendo a proporção */
+        font-size: 1.1em; 
         margin-bottom: 5px; 
         margin-top: 5px; 
     }
@@ -695,7 +693,7 @@ body {
     }
 
     .education-details .cederj-text {
-        font-size: 0.9em; /* Ajusta o tamanho para telas muito pequenas */
+        font-size: 0.9em; 
     }
 
     .education-details p {
@@ -739,7 +737,7 @@ body {
     }
     
     .education-details .cederj-text {
-        font-size: 1.0em; /* Ajusta o tamanho em landscape para manter a proporção */
+        font-size: 1.0em; 
     }
 
     .education-details p {
